@@ -16,18 +16,15 @@
         <nav>
             <ul>
                 {{-- Links para o cadastro --}}
-                <li><a href="/vehicles">Início</a></li>
-                <li><a href="/vehicles/create">Cadastro de Veículos</a></li>
+                <li><a href="/vehicles">Index</a></li>
+                <li><a href="/vehicles/create">Cadastro</a></li>
             </ul>
         </nav>
         <div class="content">
             {{-- o conteúdo da view específica será injetado aqui! --}}
             @yield('content')
         </div>
-        <footer>
-            <div>
-               
-            </div>
+        <footer> 
         </footer>
     </div>
 </body>

@@ -9,12 +9,19 @@
         @csrf
         {{-- o método de atualização é o PUT --}}
         @method('PUT')
-        <label for="Nome">Nome:</label>
-        <input type="text" name="name" id="name" required value="{{ $vehicle->name }}">
+        <label for="Nome">Marca:</label>
+        <input type="text" name="marca" id="marca" required value="{{ $vehicle->marca }}">
+        <label for="Nome">Modelo:</label>
+        <input type="text" name="model" id="model" required value="{{ $vehicle->model }}"> 
         <label for="Nome">Ano:</label>
         <input type="number" name="year" id="year" required value="{{ $vehicle->year }}">
         <label for="Nome">Cor:</label>
         <input type="text" name="color" id="color" required value="{{ $vehicle->color }}">
+        <label for="Nome">Km:</label>
+        <input type="number" name="km" id="km" required value="{{ $vehicle->km }}">
+        <label for="Nome">Combustivel:</label>
+        <input type="text" name="fuel" id="fuel" required value="{{ $vehicle->fuel }}">
+        
     </form>
     {{-- note que os botões estão fora dos forms. O atributo form indica qual form o botão pertence --}}
     <button form="update-form" type="submit">Salvar</button>

@@ -7,12 +7,18 @@
     <form class="form" method="POST" action="{{ route('vehicles.store') }}">
         {{-- CSRF é um token de segurança para validar o formulário --}}
         @csrf
-        <label for="Nome">Nome:</label>
-        <input type="text" name="name" id="name" required>
+        <label for="Nome">Marca:</label>
+        <input type="text" name="marca" id="marca" required>
+        <label for="Nome">Modelo:</label>
+        <input type="text" name="model" id="model" required>
         <label for="Nome">Ano:</label>
         <input type="number" name="year" id="year" required>
         <label for="Nome">Cor:</label>
-        <input type="text" name="color" id="color" required>
+        <input type="text" name="color" id="color" required> 
+        <label for="Nome">Km:</label>
+        <input type="number" name="km" id="km" required> 
+        <label for="Nome">Combustivel:</label>
+        <input type="text" name="fuel" id="fuel" required> 
         <input type="submit" value="Salvar">
         <input type="reset" value="Limpar">
     </form>

@@ -1,6 +1,6 @@
 {{-- herda a view 'base' --}}
 @extends('base')
-{{-- cria a seção content, definida na base, para injetar o código --}}
+{{-- criando a seção content, definida na base, para injetar o código --}}
 @section('content')
     <h2>Veículos Cadastrados</h2>
     {{-- se a variável $vehicles não existir, mostra um h3 com uma mensagem --}}
@@ -11,9 +11,10 @@
         <table class="data-table">
             <thead>
                 <tr>
-                    <th>Nome</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
                     <th>Ano</th>
-                    <th>Cor</th>
+                    <th>Cor</th> 
                     <th colspan="2">Opções</th>
                 </tr>
             </thead>
@@ -21,9 +22,12 @@
                 {{-- itera sobre a coleção de veículos --}}
                 @foreach ($vehicles as $v)
                     <tr>
-                        <td>{{ $v->name }} </td>
+                        <td>{{ $v->marca }} </td>
+                        <td>{{ $v->model }} </td>
                         <td> {{ $v->year }} </td>
                         <td> {{ $v->color }} </td>
+                        <td> {{ $v->km }} </td>
+                        <td> {{ $v->fuel }} </td> 
                         {{-- vai para a rota show, passando o id como parâmetro --}}
                         <td> <a href="{{ route('vehicles.show', $v->id) }}">Exibir</a> </td>
                         <td> <a href="{{ route('vehicles.edit', $v->id) }}">Editar</a> </td>

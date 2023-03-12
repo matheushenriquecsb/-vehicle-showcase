@@ -8,9 +8,12 @@
     @else
     {{-- senão, mostra os daddos --}}
         <h2>Mostrando dados do veículo</h2>
-        <p><strong>Nome:</strong> {{ $vehicle->name }} </p>
+        <p><strong>Marca:</strong> {{ $vehicle->marca }} </p>
+        <p><strong>Modelo:</strong> {{ $vehicle->model }} </p>
         <p><strong>Ano:</strong> {{ $vehicle->year }} </p>
-        <p><strong>Cor:</strong> {{ $vehicle->color }} </p>
+        <p><strong>Cor:</strong> {{ $vehicle->color }} </p> 
+        <p><strong>Km:</strong> {{ $vehicle->km }} </p> 
+        <p><strong>Combustivel:</strong> {{ $vehicle->fuel }} </p> 
         <a href="{{ route('vehicles.index') }}">Voltar</a>
     @endif
 @endsection
